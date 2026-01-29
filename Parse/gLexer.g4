@@ -21,6 +21,50 @@ fragment DIGIT
    : [0-9]
    ;
 
+//===========================
+//      OPERATORS
+//===========================
 ADD 
    : '+'
    ;
+
+//===========================
+//      PUNCTUATORS
+//===========================
+LCURLY
+    : '{'
+    ;
+RCURLY
+    : '}'
+    ;
+LPARENTHESIS
+    : '('
+    ;
+RPARENTHESIS
+    : ')'
+    ;
+LSQUARE
+    : '['
+    ;
+RSQUARE
+    : ']'
+    ;
+COMMA
+    : ','
+    ;
+AMPERSAND
+    : '&'
+    ;
+PIPE
+    : '|'
+    ;
+EXCLAMATION
+    : '!'
+    ;
+TILDE
+    : '~'
+    ;
+SEMICOLON
+    : ';'
+    ;
+
