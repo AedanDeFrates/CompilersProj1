@@ -21,6 +21,15 @@ fragment DIGIT
    : [0-9]
    ;
 
-ADD 
-   : '+'
-   ;
+//Operators (Aedan)
+LT          : '<' ;
+AND         : '&&' ;
+OR          : '||' ;
+MULT        : '*' ;
+PLUS        : '+' ;
+BITNOT      : '~' ;
+EQUALS      : '=' ;
+DOT         : '.' ;
+ARROW       : '->' ;
+
+
