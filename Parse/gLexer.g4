@@ -32,4 +32,18 @@ EQUALS      : '=' ;
 DOT         : '.' ;
 ARROW       : '->' ;
 
-
+//Keywords (Aedan/Joshua)
+VAR         : 'var' ;
+FUN         : 'fun' ;
+WHILE       : 'while' ;
+CONST       : 'const' ;
+STRING      : 'string' ;
+VOID        : 'void' ;
+RETURN      : 'return' ;
+IF          : 'if' ;
+ELSE        : 'else' ;
+BREAK       : 'break' ;
+INT         : 'int' ;
+TYPEDEF     : 'typedef' ;
+STRUCT      : 'struct' ;
+UNION       : 'union' ;
