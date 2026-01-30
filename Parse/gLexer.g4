@@ -30,12 +30,32 @@ fragment HEX_DIGIT
    : [0-9] | [A-F]
    ;
 
-//===========================
-//      OPERATORS
-//===========================
-ADD 
-   : '+'
-   ;
+//Operators (Aedan)
+LT          : '<' ;
+AND         : '&&' ;
+OR          : '||' ;
+MULT        : '*' ;
+PLUS        : '+' ;
+BITNOT      : '~' ;
+EQUALS      : '=' ;
+DOT         : '.' ;
+ARROW       : '->' ;
+
+//Keywords (Aedan/Joshua)
+VAR         : 'var' ;
+FUN         : 'fun' ;
+WHILE       : 'while' ;
+CONST       : 'const' ;
+STRING      : 'string' ;
+VOID        : 'void' ;
+RETURN      : 'return' ;
+IF          : 'if' ;
+ELSE        : 'else' ;
+BREAK       : 'break' ;
+INT         : 'int' ;
+TYPEDEF     : 'typedef' ;
+STRUCT      : 'struct' ;
+UNION       : 'union' ;
 
 //===========================
 //      PUNCTUATORS
@@ -89,4 +109,3 @@ OCTAL_LITERAL
 HEX_LITERAL
     : '0x'(HEX_DIGIT)+
     ;
-
