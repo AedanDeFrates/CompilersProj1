@@ -20,6 +20,15 @@ fragment ALPHA
 fragment DIGIT
    : [0-9]
    ;
+fragment NONZERO_DIGIT
+   : [1-9]
+   ;
+fragment OCTAL_DIGIT
+   : [0-7]
+   ;
+fragment HEX_DIGIT
+   : [0-9] | [A-F]
+   ;
 
 //===========================
 //      OPERATORS
@@ -32,7 +41,7 @@ ADD
 //      PUNCTUATORS
 //===========================
 LCURLY
-    : '{'
+: '{'
     ;
 RCURLY
     : '}'
@@ -66,5 +75,18 @@ TILDE
     ;
 SEMICOLON
     : ';'
+    ;
+
+//===========================
+//      INTEGERS
+//===========================
+DECIMAL_LITERAL
+    : ('-')?(NONZERO_DIGIT)(DIGIT)+
+    ;
+OCTAL_LITERAL
+    : '0'(OCTAL_DIGIT)+
+    ;
+HEX_LITERAL
+    : '0x'(HEX_DIGIT)+
     ;
 
