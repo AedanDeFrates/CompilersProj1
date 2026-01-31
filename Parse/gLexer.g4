@@ -14,23 +14,21 @@ lexer grammar gLexer;
    }
 }
 
-fragment ALPHA 
-   : [A-Za-z]
-   ;
-fragment DIGIT
-   : [0-9]
-   ;
-fragment NONZERO_DIGIT
-   : [1-9]
-   ;
-fragment OCTAL_DIGIT
-   : [0-7]
-   ;
-fragment HEX_DIGIT
-   : [0-9] | [A-F]
-   ;
+//===========================
+//         Fragments
+//===========================
 
-//Operators (Aedan)
+fragment ALPHA              : [A-Za-z] ;
+fragment DIGIT              : [0-9] ;
+fragment NONZERO_DIGIT      : [1-9] ;
+fragment DECIMAL_CONSTANT   : NONZERO_DIGIT DIGIT* ;
+fragment OCTAL_DIGIT        : [0-7] ;
+fragment OCTAL_CONSTANT     : '0' OCTAL_DIGIT* ;
+fragment HEX_DIGIT          : [0-9] | [A-F] ;
+
+//===========================
+//    Operators (Aedan)
+//===========================
 LT          : '<' ;
 AND         : '&&' ;
 OR          : '||' ;
@@ -41,7 +39,9 @@ EQUALS      : '=' ;
 DOT         : '.' ;
 ARROW       : '->' ;
 
-//Keywords (Aedan/Joshua)
+//===========================
+//  Keywords (Aedan/Joshua)
+//===========================
 VAR         : 'var' ;
 FUN         : 'fun' ;
 WHILE       : 'while' ;
@@ -58,54 +58,30 @@ STRUCT      : 'struct' ;
 UNION       : 'union' ;
 
 //===========================
-//      PUNCTUATORS
+//       Punctuators
 //===========================
-LCURLY
-: '{'
-    ;
-RCURLY
-    : '}'
-    ;
-LPARENTHESIS
-    : '('
-    ;
-RPARENTHESIS
-    : ')'
-    ;
-LSQUARE
-    : '['
-    ;
-RSQUARE
-    : ']'
-    ;
-COMMA
-    : ','
-    ;
-AMPERSAND
-    : '&'
-    ;
-PIPE
-    : '|'
-    ;
-EXCLAMATION
-    : '!'
-    ;
-TILDE
-    : '~'
-    ;
-SEMICOLON
-    : ';'
-    ;
+LCURLY          : '{' ;
+RCURLY          : '}' ;
+LPARENTHESIS    : '(' ;
+RPARENTHESIS    : ')' ;
+LSQUARE         : '[' ;
+RSQUARE         : ']' ;
+COMMA           : ',' ;
+AMPERSAND       : '&' ;
+PIPE            : '|' ;
+EXCLAMATION     : '!' ;
+TILDE           : '~' ;
+SEMICOLON       : ';' ;
 
 //===========================
-//      INTEGERS
+//        Integers
 //===========================
-DECIMAL_LITERAL
-    : ('-')?(NONZERO_DIGIT)(DIGIT)+
-    ;
-OCTAL_LITERAL
-    : '0'(OCTAL_DIGIT)+
-    ;
-HEX_LITERAL
-    : '0x'(HEX_DIGIT)+
-    ;
+DECIMAL_LITERAL    : ('-')?(NONZERO_DIGIT)(DIGIT)+ ;
+OCTAL_LITERAL      : '0'(OCTAL_DIGIT)+ ;
+HEX_LITERAL        : '0x'(HEX_DIGIT)+ ;
+
+//===========================
+//   Identifiers (Alex)
+//===========================
+IDENTIFIER     : [a-zA-Z_] [a-zA-Z_0-9]* ;
+
