@@ -7,13 +7,11 @@ public class LexerDriver {
 
     public static void main(String[] args) throws Exception {
 
-        // 1. Input (string or file)
+        // read input file from command line
         CharStream input = CharStreams.fromFileName(args[0]);
-
-        // 2. Create lexer
         gLexer lexer = new gLexer(input);
 
-        // 3. Pull tokens and print
+        // print each token until EOF
         Token token;
         while ((token = lexer.nextToken()).getType() != Token.EOF) {
             System.out.printf(

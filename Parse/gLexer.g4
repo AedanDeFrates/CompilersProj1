@@ -25,12 +25,14 @@ fragment HEXADECIMAL_DIGIT
    ;
 
 
+// \n \t \xHH \777 etc
 fragment ESCAPE_SEQUENCE
    : '\\' ( '"' | '\'' | '?' | '\\' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
    | '\\' 'x' HEXADECIMAL_DIGIT+
    | '\\' [0-7] [0-7]? [0-7]?
    ;
 
+// one character inside a string (either normal char or escape)
 fragment S_CHAR
    : ~[\u0022\\\n\r]
    | ESCAPE_SEQUENCE
@@ -40,7 +42,7 @@ fragment S_CHAR_SEQUENCE
    : S_CHAR+
    ;
 
-// Default mode: opening quote starts a string
+// see " then go into string mode
 OPEN_STRING
    : '"' { sb = new StringBuilder(); } -> pushMode(STRING_MODE), skip
    ;
