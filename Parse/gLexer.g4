@@ -15,27 +15,28 @@ lexer grammar gLexer;
 }
 
 //Fragments
-fragment ALPHA : [A-Za-z] ;
-fragment DIGIT : [0-9] ;
-fragment NONZERO_DIGIT : [1-9] ;
-fragment OCTAL_DIGIT : [0-7] ;
-fragment HEX_DIGIT : [0-9] | [A-Fa-f] ;
-fragment S_CHAR : ~('"' | [\] | [\n]) ;
+fragment ALPHA              : [A-Za-z] ;
+fragment DIGIT              : [0-9] ;
+fragment NONZERO_DIGIT      : [1-9] ;
+fragment DECIMAL_CONSTANT   : (NONZERO_DIGIT)(DIGIT)* | (DIGIT) ;
+fragment OCTAL_DIGIT        : [0-7] ;
+fragment OCTAL_CONSTANT     : '0'(OCTAL_DIGIT)+ ;
+fragment HEX_DIGIT          : [0-9] | [A-Fa-f] ;
+fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
+fragment S_CHAR             : ~('"' | [\] | [\n]) ;
 
 
 //Comments (Aedan/Joshua)
-START_LINE_COMMENT   : '//' -> pushMode(LINE_COMMENT_MODE);
-START_BLOCK_COMMENT  : '/*' -> pushMode(BLOCK_COMMENT_MODE);
+START_LINE_COMMENT   : '//' -> skip, pushMode(LINE_COMMENT_MODE);
+START_BLOCK_COMMENT  : '/*' -> skip, pushMode(BLOCK_COMMENT_MODE);
 
 
 //WhiteSpace, NewLine (Joshua/Aedan)
 WHITESPACE  : (' ' | '\t' | '\r') -> skip;
-NEW_LINE    : '\n' ;
+NEWLINE     : '\n' -> skip;
 
 //Integers (Joshua)
-DECIMAL_LITERAL : (NONZERO_DIGIT)(DIGIT)* | (DIGIT) ;
-OCTAL_LITERAL   : '0'(OCTAL_DIGIT)+ ;
-HEX_LITERAL     : '0x'(HEX_DIGIT)+ ;
+DECIMAL_LITERAL : DECIMAL_CONSTANT | OCTAL_CONSTANT | HEX_CONSTANT ;
 STRING_LITERAL  : ('"')(S_CHAR)*('"') ;
 
 
