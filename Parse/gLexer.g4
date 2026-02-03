@@ -23,8 +23,11 @@ fragment OCTAL_DIGIT        : [0-7] ;
 fragment OCTAL_CONSTANT     : '0'(OCTAL_DIGIT)+ ;
 fragment HEX_DIGIT          : [0-9] | [A-Fa-f] ;
 fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
-fragment S_CHAR             : ~('"' | [\] | [\n]) ;
+fragment ESCAPE_SEQUENCE    : '\\' ('"' | '\''| '?' | '\\' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+                            | '\\' 'x'
+                            | '\\' OCTAL_DIGIT | OCTAL_DIGIT? | OCTAL_DIGIT? ;
 
+fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r') | ESCAPE_SEQUENCE ;
 
 //Comments (Aedan/Joshua)
 START_LINE_COMMENT   : '//' -> skip, pushMode(LINE_COMMENT_MODE);
@@ -32,12 +35,12 @@ START_BLOCK_COMMENT  : '/*' -> skip, pushMode(BLOCK_COMMENT_MODE);
 
 
 //WhiteSpace, NewLine (Joshua/Aedan)
-WHITESPACE  : (' ' | '\t' | '\r') -> skip;
+WHITESPACE  : (' ' | '\t' | '\r')+ -> skip;
 NEWLINE     : '\n' -> skip;
 
 //Integers (Joshua)
 DECIMAL_LITERAL : DECIMAL_CONSTANT | OCTAL_CONSTANT | HEX_CONSTANT ;
-STRING_LITERAL  : ('"')(S_CHAR)*('"') ;
+START_STRING_LITERAL  : ('"') {sb = new StringBuilder();} -> skip, pushMode(STRING_READ_MODE);
 
 
 //Operators (Aedan)
@@ -85,12 +88,15 @@ ID          : (ALPHA | '_')(DIGIT | ALPHA | '_')* ;
 
 //Line Comment Mode
 mode LINE_COMMENT_MODE;
-    END_LINE_COMMENT    : [\n] -> popMode;
-    OTHER_CHARACTER_LINE : . -> skip ;
+    END_LINE_COMMENT        : '\n' -> skip, popMode;
+    OTHER_CHARACTER_LINE    : . -> skip ;
 
 //Block Comment Mode
 mode BLOCK_COMMENT_MODE;
-    END_BLOCK_COMMENT   : '*/' -> popMode;
-    OTHER_CHARACTER_BLOCK : . -> skip ;
+    END_BLOCK_COMMENT       : '*/' -> skip, popMode;
+    OTHER_CHARACTER_BLOCK   : . -> skip ;
 
 //String Read Mode
+mode STRING_READ_MODE;
+    STRING_LITERAL          : '"' {setText(sb.toString());} ->  popMode ;
+    READ_S_CHAR             : S_CHAR {sb.append(getText());} -> skip ;
