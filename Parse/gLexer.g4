@@ -14,51 +14,89 @@ lexer grammar gLexer;
    }
 }
 
-fragment ALPHA 
-   : [A-Za-z]
-   ;
-fragment DIGIT
-   : [0-9]
-   ;
-fragment HEXADECIMAL_DIGIT
-   : [0-9A-Fa-f]
-   ;
+//Fragments
+fragment ALPHA              : [A-Za-z] ;
+fragment DIGIT              : [0-9] ;
+fragment NONZERO_DIGIT      : [1-9] ;
+fragment DECIMAL_CONSTANT   : (NONZERO_DIGIT)(DIGIT)* | (DIGIT) ;
+fragment OCTAL_DIGIT        : [0-7] ;
+fragment OCTAL_CONSTANT     : '0'(OCTAL_DIGIT)+ ;
+fragment HEX_DIGIT          : [0-9] | [A-Fa-f] ;
+fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
+fragment ESCAPE_SEQUENCE    : '\\' ('"' | '\''| '?' | '\\' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+                            | '\\' 'x' (HEX_DIGIT)+
+                            | '\\' (OCTAL_DIGIT)(OCTAL_DIGIT)?(OCTAL_DIGIT)? ;
+
+fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r') | ESCAPE_SEQUENCE ;
+
+//Comments (Aedan/Joshua)
+START_LINE_COMMENT   : '//' -> skip, pushMode(LINE_COMMENT_MODE);
+START_BLOCK_COMMENT  : '/*' -> skip, pushMode(BLOCK_COMMENT_MODE);
 
 
-// \n \t \xHH \777 etc
-fragment ESCAPE_SEQUENCE
-   : '\\' ( '"' | '\'' | '?' | '\\' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
-   | '\\' 'x' HEXADECIMAL_DIGIT+
-   | '\\' [0-7] [0-7]? [0-7]?
-   ;
+//WhiteSpace, NewLine (Joshua/Aedan)
+WHITESPACE  : (' ' | '\t' | '\r')+ -> skip;
+NEWLINE     : '\n' -> skip;
 
-// one character inside a string (either normal char or escape)
-fragment S_CHAR
-   : ~[\u0022\\\n\r]
-   | ESCAPE_SEQUENCE
-   ;
+//Integers (Joshua)
+DECIMAL_LITERAL : DECIMAL_CONSTANT | OCTAL_CONSTANT | HEX_CONSTANT ;
+START_STRING_LITERAL  : ('"') {sb = new StringBuilder();} -> skip, pushMode(STRING_READ_MODE);
 
-fragment S_CHAR_SEQUENCE
-   : S_CHAR+
-   ;
 
-// see " then go into string mode
-OPEN_STRING
-   : '"' { sb = new StringBuilder(); } -> pushMode(STRING_MODE), skip
-   ;
+//Operators (Aedan)
+LT          : '<' ;
+AND         : '&&' ;
+OR          : '||' ;
+MULT        : '*' ;
+PLUS        : '+' ;
+BITNOT      : '~' ;
+EQUALS      : '=' ;
+DOT         : '.' ;
+ARROW       : '->' ;
 
-WS
-   : [ \t\n\r]+ -> skip
-   ;
+//Keywords (Aedan/Joshua)
+VAR         : 'var' ;
+FUN         : 'fun' ;
+WHILE       : 'while' ;
+CONST       : 'const' ;
+STRING      : 'string' ;
+VOID        : 'void' ;
+RETURN      : 'return' ;
+IF          : 'if' ;
+ELSE        : 'else' ;
+BREAK       : 'break' ;
+INT         : 'int' ;
+TYPEDEF     : 'typedef' ;
+STRUCT      : 'struct' ;
+UNION       : 'union' ;
 
-ADD 
-   : '+'
-   ;
+//Punctuators
+LCURLY      : '{' ;
+RCURLY      : '}' ;
+LPARENTHESIS: '(' ;
+RPARENTHESIS: ')' ;
+LSQUARE     : '[' ;
+RSQUARE     : ']' ;
+COMMA       : ',' ;
+AMPERSAND   : '&' ;
+PIPE        : '|' ;
+EXCLAMATION : '!' ;
+SEMICOLON   : ';' ;
 
-mode STRING_MODE;
-STRING_LITERAL
-   : '"' { setText(sb.toString()); } -> popMode
-   ;
-STRING_CHAR
-   : S_CHAR { sb.append(getText()); } -> skip
-   ;
+//Identifiers (Joshua/Aedan)
+ID          : (ALPHA | '_')(DIGIT | ALPHA | '_')* ;
+
+//Line Comment Mode
+mode LINE_COMMENT_MODE;
+    END_LINE_COMMENT        : '\n' -> skip, popMode;
+    OTHER_CHARACTER_LINE    : . -> skip ;
+
+//Block Comment Mode
+mode BLOCK_COMMENT_MODE;
+    END_BLOCK_COMMENT       : '*/' -> skip, popMode;
+    OTHER_CHARACTER_BLOCK   : . -> skip ;
+
+//String Read Mode
+mode STRING_READ_MODE;
+    STRING_LITERAL          : '"' {setText(sb.toString());} ->  popMode ;
+    READ_S_CHAR             : S_CHAR {sb.append(getText());} -> skip ;
