@@ -8,6 +8,8 @@ lexer grammar gLexer;
 
 @members {
    StringBuilder sb;
+
+
    private int stringToInt(String target) {
       // TODO: Implement me!
       return 0;
@@ -23,11 +25,12 @@ fragment OCTAL_DIGIT        : [0-7] ;
 fragment OCTAL_CONSTANT     : '0'(OCTAL_DIGIT)+ ;
 fragment HEX_DIGIT          : [0-9] | [A-Fa-f] ;
 fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
-fragment ESCAPE_SEQUENCE    : '\\' ('"' | '\''| '?' | '\\' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
-                            | '\\' 'x'
-                            | '\\' OCTAL_DIGIT | OCTAL_DIGIT? | OCTAL_DIGIT? ;
 
-fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r') | ESCAPE_SEQUENCE ;
+fragment ESCAPE_SEQUENCE    : '\\' ( '"' | '\''| '\\' | '?' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' ) ;
+fragment ESCAPE_HEX         : '\\' 'x' (HEX_DIGIT)+ ;
+fragment ESCAPE_OCTAL       : '\\' OCTAL_DIGIT | OCTAL_DIGIT? | OCTAL_DIGIT? ;
+
+fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r');
 
 //Comments (Aedan/Joshua)
 START_LINE_COMMENT   : '//' -> skip, pushMode(LINE_COMMENT_MODE);
@@ -99,4 +102,35 @@ mode BLOCK_COMMENT_MODE;
 //String Read Mode
 mode STRING_READ_MODE;
     STRING_LITERAL          : '"' {setText(sb.toString());} ->  popMode ;
-    READ_S_CHAR             : S_CHAR {sb.append(getText());} -> skip ;
+    READ_S_CHAR             : S_CHAR {sb.append(getText().toString());} -> skip ;
+    READ_ESCAPE : ESCAPE_SEQUENCE 
+{
+    String s = getText().substring(1);
+    switch(s)
+    {
+        case "n" : {s = "\n"; break;}
+        case "a" : {s = "" ; break;}
+        case "b" : {s = "\b"; break;}
+        case "f" : {s = "\f"; break;}
+        case "r" : {s = "\r"; break;}
+        case "t" : {s = "\t"; break;}
+        case "v" : {s = ""; break;}
+        case "?" : {s = "?"; break;}
+        case "\"" : {s = "\""; break;}
+        case "\'" : {s = "\'"; break;}
+        case "\\" : {s = "\\"; break;}
+    }
+    sb.append(s);
+                                       } -> skip;
+    READ_HEX : ESCAPE_HEX {} -> skip;
+    READ_OCT : ESCAPE_OCT {} -> skip;
+
+
+
+
+
+
+
+
+
+

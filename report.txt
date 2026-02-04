@@ -5,8 +5,7 @@
 ./tests/test_68.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -32,8 +31,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_93.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -59,8 +57,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_28.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -86,8 +83,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_74.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -113,8 +109,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_29.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -140,8 +135,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_59.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -167,8 +161,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_57.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -194,8 +187,7 @@ else 		  	= ___P	3	  	"J\r\12\xDBQ"	//B	/*qw*/
 ./tests/test_45.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -221,8 +213,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_80.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -248,8 +239,7 @@ string		int	= _Z6L	 	___F _F   			60461 0x7	"x\v\12\xd7\'\b"	 /*W/*/
 ./tests/test_73.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -275,8 +265,7 @@ break _O0  2 "s\'\12\x79e"		 /*S~*//*\%*//*x*//*B*/
 ./tests/test_47.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -302,8 +291,7 @@ typedef 	while ! 	_Bf			  _b 04		 "L\n\0\x60\xf\0"		"I\b\01\x82\0\00\"\f\xFal\04
 ./tests/test_6.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -329,8 +317,7 @@ var			if  __h  __fw 02	 "j\f\0\x3\xc\010"	"H\b\00\x4\1"		 /*XwK*//*>U*///
 ./tests/test_64.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -356,8 +343,7 @@ break __i	 __f		_r_ 0X0eC	 365 9 	"v\'\017\xDdyT\t\xBEd"	"j\?\0\x0a\f" 	 "S\'\0\
 ./tests/test_44.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -383,8 +369,7 @@ fun	_TB_  __LM _u7	_c		 	563			"U\t\05\xdd\104"	/*fG*//*C*//*Ed*/
 ./tests/test_76.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -410,8 +395,7 @@ while ] const	void				__X_CU	__NE  		_S0	 	_P  0354		07				"Z\'\06\x8\x55"		//-[
 ./tests/test_92.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -437,8 +421,7 @@ union	else		_C_4i _K2_1    37509 	"k\v\10\x9NrU"			"b\"\02\x12\r\xC2" "I\"\04\xf
 ./tests/test_20.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -464,8 +447,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_60.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -491,8 +473,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_15.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -518,8 +499,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_79.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -545,8 +525,7 @@ if		   { * 	,    | 	__h 	0  	9	"G\t\0\x48E\1\n" "A\f\17\x0\xCfO"		 //r(//l?9S//'
 ./tests/test_30.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -572,8 +551,7 @@ string union __C	 	7 2	03  	 	"r\v\02\x5W"	"z\r\117\x02\""	//D/*1*//*:2=*/
 ./tests/test_33.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -599,8 +577,7 @@ void		____ru__				0X3e5	"R\t\16\xE\xb\b" //@,// /*4>*/
 ./tests/test_91.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -626,8 +603,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_2.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -653,8 +629,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_58.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -680,8 +655,7 @@ fun	___f	421	0x8 0x30fC 59	74 0	2 			0	"x\v\10\xB\"\xC\r" "P\f\0\xc\'"	"y\n\11\x
 ./tests/test_62.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -707,8 +681,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_9.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -734,8 +707,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_51.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -761,8 +733,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_17.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -788,8 +759,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_12.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -815,8 +785,7 @@ int	 	__s   1 	"Q\r\1\x82R" "I\"\12\x1\n\a"	"g\?\006\x6\x1D" 	"k\\\124\xdb\0"  "
 ./tests/test_99.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -842,8 +811,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_84.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -869,8 +837,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_89.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -896,8 +863,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_11.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -923,8 +889,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_43.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -950,8 +915,7 @@ typedef	__kv_ 9281	"q\t\125\xE\?"	"E\?\0\x47X\v\x9R\x9d" 	 "e\a\1\x5cX\x65V\x5\0
 ./tests/test_18.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -977,8 +941,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_4.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1004,8 +967,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_21.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1031,8 +993,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_3.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1058,8 +1019,7 @@ void		    	__t 	  _P  0x7  41    0XD1 1 24 0XB82 561176  	"H\\\0\x92\01"				//' 
 ./tests/test_97.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1085,8 +1045,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_49.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1112,8 +1071,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_77.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1139,8 +1097,7 @@ if void	*	_h_	 ___xX	_gb	  _NV	  _DN				_xE	_Y 	0x8	07736  	 			  		"H\r\106\xa\
 ./tests/test_90.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1166,8 +1123,7 @@ typedef (	~ typedef  __o__ 					0XB 00	 "m\v\01\xD\107f"	 	"H\b\15\x1cO\v" "H\?\
 ./tests/test_63.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1193,8 +1149,7 @@ var	_BKa 	 _N			0Xdf 1		0x71de	"K\a\10\xai"	/*Z*/
 ./tests/test_34.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1220,8 +1175,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_83.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1247,8 +1201,7 @@ union	 const	 if string ~	 	[ break _c0     	 0xc "d\"\1\x8\07\xab"	//:ek//\V
 ./tests/test_50.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1274,8 +1227,7 @@ var	(			_O_   __k	_q				5	0x02 "m\t\1\x4c\11\13"	//n/*H*/ /*5`>*/
 ./tests/test_66.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1301,8 +1253,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_78.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1328,8 +1279,7 @@ var break	)  	var	 ___O	  ____Vp5	_d3j	 9042 	4	"m\t\15\xF\x6e" "V\n\016\x0\b"	"
 ./tests/test_0.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1355,8 +1305,7 @@ const	_C   ____q	0xfF 	"b\a\17\xf\11" 				  //jT(
 ./tests/test_35.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1382,8 +1331,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_53.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1409,8 +1357,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_85.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1436,8 +1383,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_70.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1463,8 +1409,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_94.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1490,8 +1435,7 @@ fun	&&			 		 int + string	[		~	__o 692	  "O\a\00\xApF\012"	/*11y*/ 	/*;U*/		//  
 ./tests/test_96.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1517,8 +1461,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_55.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1544,8 +1487,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_56.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1571,8 +1513,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_1.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1598,8 +1539,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_88.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1625,8 +1565,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_23.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1652,8 +1591,7 @@ const _N _F  0x6	0x2 		0xf88ff		"J\r\0\xbC\12\v\"\01" 			 /*Q*//* *///X/*GC*/
 ./tests/test_40.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1679,8 +1617,7 @@ void __BIf	 _lB 0  		 7 	 			"L\'\13\x5\'" "U\n\127\x8\xFFV"  //M		  ///*b.a(*/
 ./tests/test_5.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1706,8 +1643,7 @@ return	___q 	_X_		 	0XB		"M\b\10\x5\113"	//
 ./tests/test_14.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1733,8 +1669,7 @@ fun const	_y _P0_1	__A	  		_p7 0 		 	"L\v\10\x5V\04\v\x27\r\"w\xD"	"I\t\17\x1\01
 ./tests/test_72.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1760,8 +1695,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_86.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1787,8 +1721,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_25.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1814,8 +1747,7 @@ break		  __m	_p_ 0xc	28  	 "d\?\04\xE\t\125\aH" "x\'\13\xBA\02\00"  "E\v\022\xC4
 ./tests/test_32.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1841,8 +1773,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_87.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1868,8 +1799,7 @@ if < 	_u0 0x0 0 0  	 9130	"E\\\0\x37\03" 		///*'/9*//*k}0*/
 ./tests/test_22.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1895,8 +1825,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_13.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1922,8 +1851,7 @@ return	 }		____s_	    		____C_V	_t 874	 0x4D52F "C\'\1\xa\x0" "B\n\112\x2\\\"\r"
 ./tests/test_39.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1949,8 +1877,7 @@ return ____UN	_yX7 0xdf	0		 0				0	 	0 "t\v\1\x3cI" /*AG6*/
 ./tests/test_37.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -1976,8 +1903,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_61.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2003,8 +1929,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_41.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2030,8 +1955,7 @@ var )	_g	_Q 0	0X1 0		"F\"\01\xf\x9"	"k\b\10\xd\xf\x1d\f"	 "D\v\0\xD6\004"	//	/*9
 ./tests/test_8.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2057,8 +1981,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_81.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2084,8 +2007,7 @@ const 	<		 return	 while _C_P__1	_f			___B 774	0XD4c	0xf "B\v\0\x4B\t\xbd" /*]*/
 ./tests/test_27.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2111,8 +2033,7 @@ string	) __QAD	8 0xa0	0xA  "e\r\1\x4\t"	/////*0XCP*/
 ./tests/test_65.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2138,8 +2059,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_75.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2165,8 +2085,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_24.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2192,8 +2111,7 @@ while		 __yuz	  		_a 	   0x1	"m\?\114\x6\x7"  			 "N\\\10\xE\xD2\x1y\"o" "Y\b\11
 ./tests/test_38.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2219,8 +2137,7 @@ break   	struct		 struct			_P___ 02  0X4 	02506	 4	0Xef6e  2 		 "B\'\0\xdb\x50F\
 ./tests/test_42.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2246,8 +2163,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_67.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2273,8 +2189,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_36.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2300,8 +2215,7 @@ int void		while ___R 0X642A "S\'\0\xe7r\103\v"	"S\n\02\xBC\026" "F\\\0\xcE\""	"e
 ./tests/test_95.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2327,8 +2241,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_26.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2354,8 +2267,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_16.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2381,8 +2293,7 @@ typedef ____Y2_t	_u	   ___W		_F5 	0	48046 "t\\\102\x5\xC\00"	/*@f9U*/
 ./tests/test_82.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2408,8 +2319,7 @@ var  _R 	  	_Q	___P	   0	 "w\\\1\xea\a\11"  //
 ./tests/test_10.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2435,8 +2345,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_48.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2462,8 +2371,7 @@ var	__F5	0  	"q\\\14\x0\xa7"	"K\?\12\x26\xB\'\17"	 "R\r\13\x73\0"		////j(//  		/
 ./tests/test_98.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2489,8 +2397,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_31.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2516,8 +2423,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_19.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2543,8 +2449,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_69.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2570,8 +2475,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_52.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2597,8 +2501,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_7.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2624,8 +2527,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_71.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2651,8 +2553,7 @@ void ;		___V		____q 6		 04	 "G\n\022\xd\05"    "R\b\0\xej" 		"T\\\10\xbD"	 "j\\\
 ./tests/test_46.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
@@ -2678,8 +2579,7 @@ Caused by: java.lang.ClassNotFoundException: Parse.LexerDriver
 ./tests/test_54.g
 rm -rf bin;
 rm -rf Parse/antlr_build;
-error(50): gLexer.g4:34:21: syntax error: unterminated rule (missing ';') detected at ': '//'' while looking for lexer rule element
-error(50): gLexer.g4:34:35: syntax error: ',' came as a complete surprise to me while matching rule preamble
+error(56): gLexer.g4:126:15: reference to undefined rule: ESCAPE_OCT
 ./Parse/LexerDriver.java:3: error: package Parse.antlr_build does not exist
 import Parse.antlr_build.*;
 ^
