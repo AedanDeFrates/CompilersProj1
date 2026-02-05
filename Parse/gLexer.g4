@@ -14,9 +14,9 @@ lexer grammar gLexer;
       return Integer.parseInt(target, base);
    }
 
-    /*
+   /*
    private int[] hexStringToInts(String target){
-       //split string into array of substrings len<=2
+       //split string into array of values, <=2 hex digits per value
        int numChars = (int)Math.ceil(target.length()/2.0);
        int[] charNums = new int[numChars];
        String current = target;
@@ -69,7 +69,7 @@ LT          : '<' ;
 AND         : '&&' ;
 OR          : '||' ;
 STAR        : '*' ;
-PLUS        : '+' ;
+ADD        : '+' ;
 TILDE      : '~' ;
 ASSIGN      : '=' ;
 DOT         : '.' ;
@@ -127,14 +127,14 @@ mode STRING_READ_MODE;
     switch(s)
     {
         case "n" : {s = "\n"; break;}
-        case "a" : {s = "" ; break;}
+        case "a" : {s = "\007" ; break;}
         case "b" : {s = "\b"; break;}
         case "f" : {s = "\f"; break;}
         case "r" : {s = "\r"; break;}
         case "t" : {s = "\t"; break;}
-        case "v" : {s = ""; break;}
+        case "v" : {s = "\013"; break;}
         case "?" : {s = "?"; break;}
-        case "\"" : {s = "\""; break;}
+        case "\"" : {s = "\\\""; break;}
         case "\'" : {s = "\'"; break;}
         case "\\" : {s = "\\"; break;}
     }
@@ -143,14 +143,16 @@ mode STRING_READ_MODE;
     READ_HEX : ESCAPE_HEX 
 {
     String t = getText().substring(2);
-    //int val = stringToInt(t, 16);
-    int[] vals = hexStringToInts(t);
-    for(int v : vals){
-        sb.append((char)v);
-    }
+    int val = stringToInt(t, 16);
+
+    sb.append((char)val);
     //System.out.println(val);
     //System.out.println((char)val);
-    //sb.append((char)val);
+    /*int[] vals = hexStringToInts(t);
+    for(int v : vals){
+        sb.append((char)v);
+    }*/
+
 } -> skip ;
    READ_OCT : ESCAPE_OCTAL 
 {
