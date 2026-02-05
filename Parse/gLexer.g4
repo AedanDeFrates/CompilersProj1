@@ -10,9 +10,8 @@ lexer grammar gLexer;
    StringBuilder sb;
 
 
-   private int stringToInt(String target) {
-      // TODO: Implement me!
-      return 0;
+   private int stringToInt(String target, int base) {
+      return Integer.parseInt(target, base);
    }
 }
 
@@ -28,7 +27,7 @@ fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
 
 fragment ESCAPE_SEQUENCE    : '\\' ( '"' | '\''| '\\' | '?' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' ) ;
 fragment ESCAPE_HEX         : '\\' 'x' (HEX_DIGIT)+ ;
-fragment ESCAPE_OCTAL       : '\\' OCTAL_DIGIT | OCTAL_DIGIT? | OCTAL_DIGIT? ;
+fragment ESCAPE_OCTAL       : '\\' OCTAL_DIGIT  (OCTAL_DIGIT?)  (OCTAL_DIGIT?) ;
 
 fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r');
 
@@ -121,16 +120,20 @@ mode STRING_READ_MODE;
         case "\\" : {s = "\\"; break;}
     }
     sb.append(s);
-                                       } -> skip;
-    READ_HEX : ESCAPE_HEX {} -> skip;
-    READ_OCT : ESCAPE_OCT {} -> skip;
-
-
-
-
-
-
-
-
-
-
+} -> skip ;
+    READ_HEX : ESCAPE_HEX 
+{
+    String t = getText().substring(2);
+    int val = stringToInt(t, 16);
+    //System.out.println(val);
+    //System.out.println((char)val);
+    sb.append((char)val);
+} -> skip ;
+   READ_OCT : ESCAPE_OCTAL 
+{
+    String t = getText().substring(1);
+        int val = stringToInt (t, 8);
+        //System.out.println(val);
+        //System.out.println((char)val);
+        sb.append((char)val);
+} -> skip ;
