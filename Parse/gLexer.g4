@@ -61,6 +61,7 @@ NEWLINE     : '\n' -> skip;
 //Integers (Joshua)
 DECIMAL_LITERAL : DECIMAL_CONSTANT | OCTAL_CONSTANT | HEX_CONSTANT ;
 
+//String Start
 START_STRING_LITERAL  : ('"') {sb = new StringBuilder();} -> skip, pushMode(STRING_READ_MODE);
 
 
@@ -121,44 +122,44 @@ mode BLOCK_COMMENT_MODE;
 mode STRING_READ_MODE;
     STRING_LITERAL          : '"' {setText(sb.toString());} ->  popMode ;
     READ_S_CHAR             : S_CHAR {sb.append(getText().toString());} -> skip ;
-    READ_ESCAPE : ESCAPE_SEQUENCE 
-{
-    String s = getText().substring(1);
-    switch(s)
-    {
-        case "n" : {s = "\n"; break;}
-        case "a" : {s = "\007" ; break;}
-        case "b" : {s = "\b"; break;}
-        case "f" : {s = "\f"; break;}
-        case "r" : {s = "\r"; break;}
-        case "t" : {s = "\t"; break;}
-        case "v" : {s = "\013"; break;}
-        case "?" : {s = "?"; break;}
-        case "\"" : {s = "\\\""; break;}
-        case "\'" : {s = "\'"; break;}
-        case "\\" : {s = "\\"; break;}
-    }
-    sb.append(s);
-} -> skip ;
-    READ_HEX : ESCAPE_HEX 
-{
-    String t = getText().substring(2);
-    int val = stringToInt(t, 16);
 
-    sb.append((char)val);
-    //System.out.println(val);
-    //System.out.println((char)val);
-    /*int[] vals = hexStringToInts(t);
-    for(int v : vals){
-        sb.append((char)v);
-    }*/
+    //Escape Sequences
+    READ_ESCAPE : ESCAPE_SEQUENCE {
+        String s = getText().substring(1);
+        switch(s)
+        {
+            case "n" : {s = "\n"; break;}
+            case "a" : {s = "\007" ; break;}
+            case "b" : {s = "\b"; break;}
+            case "f" : {s = "\f"; break;}
+            case "r" : {s = "\r"; break;}
+            case "t" : {s = "\t"; break;}
+            case "v" : {s = "\013"; break;}
+            case "?" : {s = "?"; break;}
+            case "\"" : {s = "\\\""; break;}
+            case "\'" : {s = "\'"; break;}
+            case "\\" : {s = "\\"; break;}
+        }
+        sb.append(s);
+    } -> skip ;
 
-} -> skip ;
-   READ_OCT : ESCAPE_OCTAL 
-{
-    String t = getText().substring(1);
+    READ_HEX : ESCAPE_HEX {
+        String t = getText().substring(2);
+        int val = stringToInt(t, 16);
+
+        sb.append((char)val);
+        //System.out.println(val);
+        //System.out.println((char)val);
+        /*int[] vals = hexStringToInts(t);
+        for(int v : vals){
+            sb.append((char)v);
+        }*/
+    } -> skip ;
+
+   READ_OCT : ESCAPE_OCTAL {
+        String t = getText().substring(1);
         int val = stringToInt (t, 8);
         //System.out.println(val);
         //System.out.println((char)val);
         sb.append((char)val);
-} -> skip ;
+   } -> skip ;
