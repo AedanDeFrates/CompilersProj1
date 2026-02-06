@@ -2,7 +2,7 @@ export CLASSPATH=$CLASSPATH:$(pwd)
 export CLASSPATH=$CLASSPATH:$(pwd)/bin/
 export CLASSPATH=$CLASSPATH:$(pwd)/lib/*
 
-make clean
+make -s clean
 
 java -jar ./lib/antlr-4.13.2-complete.jar Parse/gLexer.g4 -o ./Parse/antlr_build
 

@@ -9,9 +9,28 @@ lexer grammar gLexer;
 @members {
    StringBuilder sb;
 
-private int stringToInt(String target, int base) {
-    return Integer.parseInt(target, base);
- }
+
+   private int stringToInt(String target, int base) {
+      return Integer.parseInt(target, base);
+   }
+
+   /*
+   private int[] hexStringToInts(String target){
+       //split string into array of values, <=2 hex digits per value
+       int numChars = (int)Math.ceil(target.length()/2.0);
+       int[] charNums = new int[numChars];
+       String current = target;
+       int i = 0;
+       while(current.length()>1){
+           charNums[i++] = Integer.parseInt(current.substring(0,2),16);
+           current = current.substring(2);
+       }
+       if(current.length()==1){
+           charNums[i] = Integer.parseInt(current,16);
+       }
+       return charNums;
+   }
+   */
 }
 
 //Fragments
@@ -22,11 +41,11 @@ fragment DECIMAL_CONSTANT   : (NONZERO_DIGIT)(DIGIT)* | (DIGIT) ;
 fragment OCTAL_DIGIT        : [0-7] ;
 fragment OCTAL_CONSTANT     : '0'(OCTAL_DIGIT)+ ;
 fragment HEX_DIGIT          : [0-9] | [A-Fa-f] ;
-fragment HEX_CONSTANT       : '0x'(HEX_DIGIT)+ ;
+fragment HEX_CONSTANT       : '0'('x'|'X')(HEX_DIGIT)+ ;
 
 fragment ESCAPE_SEQUENCE    : '\\' ( '"' | '\''| '\\' | '?' | 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' ) ;
-fragment ESCAPE_HEX         : '\\' 'x' HEX_DIGIT+ ;
-fragment ESCAPE_OCTAL       : '\\' OCTAL_DIGIT OCTAL_DIGIT? OCTAL_DIGIT? ;
+fragment ESCAPE_HEX         : '\\' 'x'(HEX_DIGIT)(HEX_DIGIT)? ;
+fragment ESCAPE_OCTAL       : '\\' OCTAL_DIGIT  (OCTAL_DIGIT?)  (OCTAL_DIGIT?) ;
 
 fragment S_CHAR             : ~('"' | '\\' | '\n' | '\r');
 
@@ -41,6 +60,8 @@ NEWLINE     : '\n' -> skip;
 
 //Integers (Joshua)
 DECIMAL_LITERAL : DECIMAL_CONSTANT | OCTAL_CONSTANT | HEX_CONSTANT ;
+
+//String Start
 START_STRING_LITERAL  : ('"') {sb = new StringBuilder();} -> skip, pushMode(STRING_READ_MODE);
 
 
@@ -48,10 +69,10 @@ START_STRING_LITERAL  : ('"') {sb = new StringBuilder();} -> skip, pushMode(STRI
 LT          : '<' ;
 AND         : '&&' ;
 OR          : '||' ;
-MULT        : '*' ;
-PLUS        : '+' ;
-BITNOT      : '~' ;
-EQUALS      : '=' ;
+STAR        : '*' ;
+ADD        : '+' ;
+TILDE      : '~' ;
+ASSIGN      : '=' ;
 DOT         : '.' ;
 ARROW       : '->' ;
 
@@ -74,14 +95,14 @@ UNION       : 'union' ;
 //Punctuators
 LCURLY      : '{' ;
 RCURLY      : '}' ;
-LPARENTHESIS: '(' ;
-RPARENTHESIS: ')' ;
+LPAREN      : '(' ;
+RPAREN      : ')' ;
 LSQUARE     : '[' ;
 RSQUARE     : ']' ;
 COMMA       : ',' ;
-AMPERSAND   : '&' ;
-PIPE        : '|' ;
-EXCLAMATION : '!' ;
+BITWISEAND   : '&' ;
+BITWISEOR        : '|' ;
+NOT : '!' ;
 SEMICOLON   : ';' ;
 
 //Identifiers (Joshua/Aedan)
@@ -101,37 +122,44 @@ mode BLOCK_COMMENT_MODE;
 mode STRING_READ_MODE;
     STRING_LITERAL          : '"' {setText(sb.toString());} ->  popMode ;
     READ_S_CHAR             : S_CHAR {sb.append(getText().toString());} -> skip ;
-    READ_ESCAPE : ESCAPE_SEQUENCE
-{
-    String s = getText().substring(1);
-    switch(s)
-    {
-        case "n" : {s = "\n"; break;}
-        case "a" : {s = "" ; break;}
-        case "b" : {s = "\b"; break;}
-        case "f" : {s = "\f"; break;}
-        case "r" : {s = "\r"; break;}
-        case "t" : {s = "\t"; break;}
-        case "v" : {s = ""; break;}
-        case "?" : {s = "?"; break;}
-        case "\"" : {s = "\""; break;}
-        case "\'" : {s = "\'"; break;}
-        case "\\" : {s = "\\"; break;}
-    }
-    sb.append(s);
-                                       } -> skip;
-    READ_HEX : ESCAPE_HEX
-    {
+
+    //Escape Sequences
+    READ_ESCAPE : ESCAPE_SEQUENCE {
+        String s = getText().substring(1);
+        switch(s)
+        {
+            case "n" : {s = "\n"; break;}
+            case "a" : {s = "\007" ; break;}
+            case "b" : {s = "\b"; break;}
+            case "f" : {s = "\f"; break;}
+            case "r" : {s = "\r"; break;}
+            case "t" : {s = "\t"; break;}
+            case "v" : {s = "\013"; break;}
+            case "?" : {s = "?"; break;}
+            case "\"" : {s = "\\\""; break;}
+            case "\'" : {s = "\'"; break;}
+            case "\\" : {s = "\\"; break;}
+        }
+        sb.append(s);
+    } -> skip ;
+
+    READ_HEX : ESCAPE_HEX {
         String t = getText().substring(2);
         int val = stringToInt(t, 16);
-        sb.append((char)val);
-    }
-    -> skip;
 
-    READ_OCT : ESCAPE_OCTAL
-    {
+        sb.append((char)val);
+        //System.out.println(val);
+        //System.out.println((char)val);
+        /*int[] vals = hexStringToInts(t);
+        for(int v : vals){
+            sb.append((char)v);
+        }*/
+    } -> skip ;
+
+   READ_OCT : ESCAPE_OCTAL {
         String t = getText().substring(1);
         int val = stringToInt (t, 8);
+        //System.out.println(val);
+        //System.out.println((char)val);
         sb.append((char)val);
-    }
-    -> skip;
+   } -> skip ;
