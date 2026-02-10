@@ -124,3 +124,34 @@ Octal Escapes can have a max of three digits. We take the octal numbers string a
 For Hex escapes we limit it to a maximum of two digits like in the solution, although the C documentation accepts any number of digits, even if a ASCII character only takes two. For Hex we also convert the string value to an int and to the respective character like for the octals.
 
 ## Group Strategy and Issues Encountered
+
+### Group Strategy
+We divided lexer work by token types. Each member picked tasks from the GitHub issues list. We held regular group coding and debugging sessions, which were especially helpful for understanding ANTLR’s mode switching for comments and strings.
+
+### Issues Encountered
+
+#### Learning ANTLR
+The biggest challenge was learning ANTLR from scratch. None of us had prior experience, so understanding how it processes lexer rules and generates Java code took time. We read documentation and tested different setups until it worked.
+
+#### Debugging Regular Expressions
+Finding bugs in REGEX patterns was difficult. We added debug statements to locate where token patterns were breaking. Testing each rule separately before combining them made debugging easier.
+
+#### Mode Switching for String Literals
+Mode switching for strings was challenging. When the lexer sees an opening quote, it must:
+- Switch from default mode to string mode using `pushMode(STRING_MODE)`
+- Process everything inside the string, including escape sequences
+- Return to default mode on closing quote with `popMode`
+
+The order of rules in each mode was critical to get this working correctly.
+
+#### Escape Sequence Processing
+Escape sequences had multiple cases:
+- Differentiating a backslash as an escape vs a literal backslash
+- Supporting simple escapes (`\n`, `\t`), hex (`\xHH`), and octal (`\OOO`)
+- Using `stringToInt` to convert hex and octal to integers and back to characters
+- Appending the resulting character to the `StringBuilder`
+
+Java code was written directly in the ANTLR grammar file for this.
+
+#### Development Environment Setup
+Windows users had trouble with the environment. Line endings would change from Unix `\n` to Windows `\r\n` when switching branches, requiring manual fixes. Everything had to run in WSL rather than native Windows. Debugging setup often took longer than writing the code itself.
