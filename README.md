@@ -3,10 +3,10 @@
 
 ### Group Members
 
- - Aedan DeFrates
- - Alex Hawk
- - Lorenzo Jackson
- - Joshua Walther
+- Aedan DeFrates
+- Alex Hawk
+- Lorenzo Jackson
+- Joshua Walther
 
 ## Lexer Theory
 ### What is a Lexer?
@@ -19,7 +19,7 @@ ANTLR is a lexer and parser generator that simplifies the process of writing a l
 To run our lexer, use the provided shell scripts and test files.
 `./run.sh <test_file>`
 `./test.sh`
-or 
+or
 `./run_solution.sh <test_file>`
 to run the solution.
 ## Code Implementation
@@ -28,44 +28,43 @@ to run the solution.
 For the basic tokens, they are defined with a simple one or two character REGEX like `ADD: '+';`. We matched the token names to those in the solution.
 
 ####  Operators
- - LT: <
- - AND: &&
- - OR: ||
- - STAR: *
- - ADD: +
- - TILDE: ~
- - ASSIGN: =
- - DOT: .
- - ARROW: ->
- 
+- LT: `<`
+- AND: `&&`
+- OR: `||`
+- STAR: `*`
+- ADD: `+`
+- TILDE: `~`
+- ASSIGN: `=`
+- DOT: `.`
+- ARROW: `->`
 #### Keywords
- - VAR: var
- - FUN: fun
- - WHILE: while
- - CONST: const
- - STRING: string
- - VOID: void
- - RETURN: return
- - IF: if
- - ELSE: else
- - BREAK: break
- - INT: int
- - TYPEDEF: typedef
- - STRUCT: struct
- - UNION: union
- 
+- VAR: `var`
+- FUN: `fun`
+- WHILE: `while`
+- CONST: `const`
+- STRING: `string`
+- VOID: `void`
+- RETURN: `return`
+- IF: `if`
+- ELSE: `else`
+- BREAK: `break`
+- INT: `int`
+- TYPEDEF: `typedef`
+- STRUCT: `struct`
+- UNION: `union`
+
 #### Punctuators
- - LCURLY: {
- - RCURLY }
- - LPAREN: (
- - RPAREN )
- - LSQUARE: [
- - RSQUARE ]
- - COMMA: , 
- - BITWISEAND: &
- - BITWISEOR: |
- - NOT: !
- - SEMICOLON:  ;
+- LCURLY: `{`
+- RCURLY `}`
+- LPAREN: `(`
+- RPAREN `)`
+- LSQUARE: `[`
+- RSQUARE `]`
+- COMMA: `,`
+- BITWISEAND: `&`
+- BITWISEOR: `|`
+- NOT: `!`
+- SEMICOLON:  `;`
 
 We made sure that tokens like AND come before BITWISEAND in the file order, so that the double characters do not get read as two of their single character versions.
 
@@ -80,14 +79,14 @@ For identifiers we first defined fragments ALPHA and DIGIT which match a single 
 Decimal literals represent any number value, and include any Decimal, Octal, or Hex Constants. We created ANTLR fragments for these constants and as well as decimal(0-9), hex(0-9A-F), and octal digits(0-7)
 
 For Constants, Decimals cannot have leading zeros, Octals must start with a zero, and hex must start with 0x or 0X. In the C documentation, Hex constants must have a lowercase x but the solution allows for x or X so we supported both.
- 
- - DECIMAL_CONST: `NONZERO_DIGIT)(DIGIT)* | (DIGIT)` 
- - OCTAL_CONST: `'0'(OCTAL_DIGIT)+` 
- - HEX_CONST: `'0'('x'|'X')(HEX_DIGIT)+` 
- - DECIMAL_LITERAL: `DECIMAL_CONST| OCTAL_CONST| HEX_CONST`
+
+- DECIMAL_CONST: `NONZERO_DIGIT)(DIGIT)* | (DIGIT)`
+- OCTAL_CONST: `'0'(OCTAL_DIGIT)+`
+- HEX_CONST: `'0'('x'|'X')(HEX_DIGIT)+`
+- DECIMAL_LITERAL: `DECIMAL_CONST| OCTAL_CONST| HEX_CONST`
 
 ### Whitespaces and Comments
-The lexer does not need to tokenize whitespace characters like blanks, tabs, return carriages and new lines. For these characters, we can tell ANTLR to skip over these like this: 
+The lexer does not need to tokenize whitespace characters like blanks, tabs, return carriages and new lines. For these characters, we can tell ANTLR to skip over these like this:
 `WHITESPACE : (' ' | '\t' | '\r')+ -> skip;`
 
 #### Line and Block Comments
@@ -117,8 +116,11 @@ At the end of the string we take the built string and set the tokens value to it
 #### Escape Sequences
 For escape sequences, we defined rules for simple escapes as well hex and octal characters, which take the string and convert it to the correct output before appending it to the string.
 
-For simple escape sequences we defined and Escape_Sequence framgment, and a rule to detect them. We then remove the `\` from string and pass the escape character through a switch statement that appends the corresponding string.
+For simple escape sequences we defined and Escape_Sequence framgment, and a rule to detect them. We then remove the `\` from string and pass the escape character through a switch statement that appends the corresponding string. We support these simple escape sequences: `\n,` `\a`, `\b`, `\f`, `\r`, `\t`, `\v`, `\?`, `\\`, `\'`, `\"`.
 
-Octal Escapes can have a max of three digits
+
+Octal Escapes can have a max of three digits. We take the octal numbers string and convert them to an integer using the `Integer.parseInt()` method in java and convert that to the respective character.
+
+For Hex escapes we limit it to a maximum of two digits like in the solution, although the C documentation accepts any number of digits, even if a ASCII character only takes two. For Hex we also convert the string value to an int and to the respective character like for the octals.
 
 ## Group Strategy and Issues Encountered
